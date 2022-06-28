@@ -1,0 +1,64 @@
+ข้อ 1 
+SELECt `employeeNumber`,`firstName`,`lastName` 
+FROM `employees`
+
+ข้อ 2
+SELECT `officeCode`,`city`,`state`,`country` 
+FROM `offices` 
+WHERE `country` = 'USA'
+
+ข้อ 3
+SELECT `orderNumber`,`orderDate` 
+FROM `orders` 
+WHERE `shippedDate` > '2004-12-31 23:59:59'
+
+ข้อ 4
+SELECT `customerName`,`phone`,`postalCode` 
+FROM `customers` 
+WHERE `creditLimit` > 1100 and `postalCode` LIKE '44%'
+
+ข้อ 5
+SELECT * 
+FROM `employees` 
+WHERE `employeeNumber` = (SELECT MAX(`employeeNumber`) FROM `employees`)
+
+ข้อ 6
+SELECT `country`, count(`customerNumber`) 
+FROM `customers`
+GROUP BY `country`
+ORDER BY `country` DESC
+
+ข้อ 7
+SELECT `country`, `state`,count(`customerNumber`) 
+FROM `customers`
+GROUP BY `country` , `state` HAVING COUNT(`state`) > 1 
+ORDER BY `country` DESC , `state` DESC
+
+ข้อ 8
+SELECT `customerNumber`,`checkNumber`,AVG(`amount`) as aaa
+FROM (SELECT * FROM `payments` WHERE `paymentDate` > '2003-12-31 23:59:59') AS t1
+GROUP BY `customerNumber`HAVING aaa>60000
+ORDER BY aaa
+
+ข้อ 9
+SELECT orders.`orderNumber` , productCode , `status` , quantityOrdered
+FROM `orders` , `orderdetails`
+WHERE orders.`orderNumber` = orderdetails.`orderNumber`
+
+
+ข้อ 10
+SELECT orders.`orderNumber` , `products`.`productName` , `status` , quantityOrdered
+FROM `orders` , `orderdetails` , `products`
+WHERE orders.`orderNumber` = orderdetails.`orderNumber` AND `products`.`productCode` = `orderdetails`.`productCode` 
+
+
+ข้อ 11
+SELECT `customers`.`customerName`, `payments`.`paymentDate` , `payments`.`amount`
+FROM `customers`,`payments`
+WHERE `customers`.`customerNumber` = `payments`.`customerNumber` and `customers`.`customerName` LIKE '%Co.'
+
+ข้อ 12
+SELECT city 
+FROM `offices` , `employees`
+WHERE `offices`.`officeCode` = `employees`.`officeCode`
+GROUP BY city HAVING count(`employees`.`employeeNumber`)>2
