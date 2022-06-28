@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-02 09:56:35 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDM6NTc6MTggUE07Mjg3NQ=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDI7MDk6NTY6MzUgUE07MTg7MzA0Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="w" type="Real" array="False" size=""/>
+            <input variable="w"/>
+            <declare name="h" type="Real" array="False" size=""/>
+            <input variable="h"/>
+            <declare name="BMI" type="Real" array="False" size=""/>
+            <assign variable="BMI" expression="w/(h*h)"/>
+            <if expression="BMI&lt;20">
+                <then>
+                    <output expression="&quot;Thin&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="BMI &gt;=20 and BMI&lt;=25">
+                        <then>
+                            <output expression="&quot;Normal&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="BMI&gt;25">
+                                <then>
+                                    <output expression="&quot;Fat&quot;" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
