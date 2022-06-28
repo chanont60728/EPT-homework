@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-06 05:40:28 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6NDA6MzcgUE07Mjg3MA=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDY7MDU6NDA6MjggUE07MTkxOzMwODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="mak" type="Integer" array="False" size=""/>
+            <declare name="noi" type="Integer" array="False" size=""/>
+            <input variable="mak"/>
+            <input variable="noi"/>
+            <if expression="mak &gt;= noi">
+                <then>
+                    <output expression="mak" newline="True"/>
+                </then>
+                <else>
+                    <output expression="noi" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

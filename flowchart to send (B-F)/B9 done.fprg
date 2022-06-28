@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-31 05:33:38 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6MjU6MjYgUE07Mjg3MQ=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6MzM6MzggUE07NDsyOTg0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="100" direction="inc" step="1">
+                <if expression="i%3==0 or i%5==0">
+                    <then>
+                        <if expression="i%15 !=0">
+                            <then>
+                                <output expression="i" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

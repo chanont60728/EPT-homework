@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-03 03:15:32 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6NDA6MzcgUE07Mjg3MA=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDM7MDM6MTU6MzIgUE07MTI5OzMwODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="blank" type="String" array="False" size=""/>
+            <assign variable="blank" expression="&quot; &quot;"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <for variable="a" start="0" end="9" direction="inc" step="1">
+                <declare name="b" type="Integer" array="False" size=""/>
+                <for variable="b" start="1" end="9-a" direction="inc" step="1">
+                    <output expression="&quot;-&quot;" newline="False"/>
+                </for>
+                <declare name="c" type="Integer" array="False" size=""/>
+                <for variable="c" start="1" end="(a*2)+1" direction="inc" step="1">
+                    <output expression="&quot;x&quot;" newline="False"/>
+                </for>
+                <output expression="blank" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

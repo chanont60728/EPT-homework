@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-05 10:32:53 AM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6NDA6MzcgUE07Mjg3MA=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDU7MTA6MzI6NTMgQU07MTc2OzMwNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="sum" type="Real" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <assign variable="a" expression="1"/>
+            <while expression="a&lt;=n">
+                <assign variable="sum" expression="sum+(1/a)"/>
+                <assign variable="a" expression="a+1"/>
+            </while>
+            <output expression="sum" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

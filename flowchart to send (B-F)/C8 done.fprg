@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-03 06:39:02 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6NDA6MzcgUE07Mjg3MA=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDM7MDY6Mzk6MDIgUE07MTYxOzMwODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="blank" type="String" array="False" size=""/>
+            <assign variable="blank" expression="&quot; &quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="j" type="Integer" array="False" size=""/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <for variable="j" start="0" end="8-i" direction="inc" step="1">
+                    <output expression="&quot;-&quot;" newline="False"/>
+                </for>
+                <if expression="i%2 != 0">
+                    <then>
+                        <for variable="k" start="0" end="(i*2)" direction="inc" step="1">
+                            <output expression="k+1" newline="False"/>
+                        </for>
+                        <output expression="blank" newline="True"/>
+                    </then>
+                    <else>
+                        <for variable="k" start="0" end="(i*2)" direction="inc" step="1">
+                            <output expression="(i*2)-(k-1)" newline="False"/>
+                        </for>
+                        <output expression="blank" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="chano"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-04-07 08:57:01 PM"/>
+        <attribute name="created" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDMtMzE7MDU6NDA6MzcgUE07Mjg3MA=="/>
+        <attribute name="edited" value="Y2hhbm87TEFQVE9QLVQ5NzBLUVBUOzIwMjItMDQtMDc7MDg6NTc6MDEgUE07MjIwOzMwODM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <for variable="a" start="2" end="541" direction="inc" step="1">
+                <assign variable="b" expression="a"/>
+                <assign variable="c" expression="0"/>
+                <while expression="b&gt;0">
+                    <if expression="a%b=0">
+                        <then>
+                            <assign variable="c" expression="c+1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="b" expression="b-1"/>
+                </while>
+                <if expression="c=2">
+                    <then>
+                        <output expression="a" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
