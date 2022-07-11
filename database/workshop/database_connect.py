@@ -29,8 +29,10 @@ class blank_database_and_table():
 
         # เพิ่มข้อมูลตารางและ column ของแต่ละตาราง ถ้าจะเพิ่มตารางหรือ column ให้มาเพิ่มตรงนี้#
         dict_of_SQL_command = {
-        "client_detail" : "CREATE TABLE CLIENT_DETAIL(ClientID int PRIMARY KEY not null,Firstname varchar(40) not null,Lastname varchar(40))",
-        "horpak_detail" : "CREATE TABLE HORPAK(horpak_and_room_id varchar(40) PRIMARY KEY not null,horpak_name varchar(10) not null,room_number int not null,ClientID int not null)"
+        "client_detail" : "CREATE TABLE CLIENT_DETAIL(ClientID varchar(10) PRIMARY KEY not null,Firstname varchar(40) not null,Lastname varchar(40),E_mail varchar(40))",
+        "horpak_detail" : "CREATE TABLE HORPAK(horpak_and_room_id varchar(10) PRIMARY KEY not null,horpak_name varchar(10) not null,room_number int not null,ClientID varchar(10) not null)",
+        "reservation" : "CREATE TABLE RESERVATION(reserve_id varchar(10) PRIMARY KEY not null,horpak_and_room_id varchar(10) not null,ClientID varchar(10) not null,date_reserve date,date_check_in date not null)",
+        "changing" : "CREATE TABLE CHANGING_ROOM(changing_id varchar(10) PRIMARY KEY not null,old_room_number int not null,new_room_number int not null,ClientID varchar(10) not null,date_changing date not null)"
         }
 
         mydb = mysql.connector.connect(
