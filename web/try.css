@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(173, 230, 185);
+    background-image: url(cap.JPG);
+  }
+  
+  #para2 {
+    color: rgb(227, 12, 26);
+    margin-left: 50px;
+  }
+
+  #para1 {
+    color:magenta;
+  }
