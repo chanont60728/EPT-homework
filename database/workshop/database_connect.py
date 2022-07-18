@@ -1,4 +1,5 @@
 import mysql.connector
+
 class blank_database_and_table():
     ##################################################
     ### ส่วนนี้เป็นการเชื่อมต่อชั่วคราวแล้วจะปิดแล้วเปิดใหม่ ###
@@ -59,8 +60,8 @@ class blank_database_and_table():
         mydb.close()
         print("ปิดการเชื่อมต่อแล้ว")
 
-
 database_horpak = blank_database_and_table()
 database_horpak.insert_table()
+
 
 
